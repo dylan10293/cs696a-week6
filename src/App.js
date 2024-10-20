@@ -1,6 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import VerticalNavBar from './components/VerticalNavigation/VerticalNavBar';
+import HeaderBar from './components/HeaderBar/HeaderBar';
 
 function App() {
   return (
@@ -9,9 +10,7 @@ function App() {
         <VerticalNavBar />
       </div>
       <div className="main-container">
-        <div className="top-bar">
-          top-bar goes here
-        </div>
+        <HeaderBar />
         <div className="content-container">
           Content goes here
         </div>

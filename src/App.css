@@ -12,10 +12,6 @@
 	flex-direction: column;
 }
 
-.top-bar {
-	padding: 10px;
-}
-
 .content-container {
 	background-color: blueviolet;
 	flex-grow: 1;

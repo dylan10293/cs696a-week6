@@ -1,0 +1,27 @@
+.top-bar {
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.profile-section {
+	display: flex;
+	align-items: center;
+}
+
+.search {
+	display: flex;
+	/* position: relative; */
+}
+
+.search input {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border-right: none;
+}
+
+.search button {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
