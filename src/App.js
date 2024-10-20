@@ -1,6 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import VerticalNavBar from './components/VerticalNavigation/VerticalNavBar';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       </div>
       <div className="main-container">
         <div className="side-bar">
-          Sidebar goes here
+          <VerticalNavBar />
         </div>
         <div className="content-container">
           Content goes here

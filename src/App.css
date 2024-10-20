@@ -1,7 +1,7 @@
 .App {
 	text-align: center;
 	display: flex;
-	background-color: cadetblue;
+	/* background-color: cadetblue; */
 	flex-direction: column;
 	height: 100vh;
 }
@@ -13,12 +13,7 @@
 }
 
 .top-bar {
-	background-color: red;
-	padding: 10px;
-}
-
-.side-bar {
-	background-color: green;
+	/* background-color: red; */
 	padding: 10px;
 }
 

@@ -1,0 +1,16 @@
+.side-bar .nav-link {
+	/* background: yellow; */
+	display: flex;
+	align-items: center;
+}
+
+.side-bar .nav-link span {
+	padding-left: 5px;
+}
+
+.side-bar .nav-container {
+	/* font-size: 1rem; */
+	/* display: flex; */
+	/* flex-direction: column; */
+	/* align-items: center; */
+}
