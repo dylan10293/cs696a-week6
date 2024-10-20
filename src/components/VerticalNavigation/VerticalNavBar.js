@@ -2,7 +2,7 @@ import React from 'react';
 
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { FaHome, FaUser, FaCog, FaInfoCircle, FaEnvelope } from 'react-icons/fa';
+import { FaHome, FaUsers, FaChartBar, FaCartPlus, FaCog } from 'react-icons/fa';
 
 import "./VerticalNavBar.css"
 
@@ -11,6 +11,29 @@ import "./VerticalNavBar.css"
 // TODO: Ensure the sidebar is collapsible on smaller screens.
 
 const VerticalNavBar = () => {
+
+	const options = [{
+		text: "Dashboard",
+		href: "/dashboard",
+		icon: <FaHome />
+	}, {
+		text: "Users",
+		href: "/users",
+		icon: <FaUsers />
+	}, {
+		text: "Analytics",
+		href: "/Analytics",
+		icon: <FaChartBar />
+	}, {
+		text: "Orders",
+		href: "/Orders",
+		icon: <FaCartPlus />
+	}, {
+		text: "Settings",
+		href: "/Settings",
+		icon: <FaCog />
+	}]
+
 	return (
 		<Navbar expand="lg" className="p-2">
 			<div className="nav-container">
@@ -18,21 +41,11 @@ const VerticalNavBar = () => {
 				<Navbar.Brand href="#home" className="ps-3">React-Bootstrap</Navbar.Brand>
 				<Navbar.Collapse id="navbar-nav" className="w-100">
 					<Nav className="flex-column w-100">
-						<Nav.Link href="home">
-							<FaHome /> <span>Home</span>
-						</Nav.Link>
-						<Nav.Link href="profile">
-							<FaUser /> <span>Profile</span>
-						</Nav.Link>
-						<Nav.Link href="settings">
-							<FaCog /> <span>Settings</span>
-						</Nav.Link>
-						<Nav.Link href="about">
-							<FaInfoCircle /> <span>Info</span>
-						</Nav.Link>
-						<Nav.Link href="contact">
-							<FaEnvelope /> <span>Contact</span>
-						</Nav.Link>
+						{options.map(({ text, href, icon }) => (
+							<Nav.Link href={href}>
+								{icon}<span>{text}</span>
+							</Nav.Link>
+						))}
 					</Nav>
 				</Navbar.Collapse>
 			</div>

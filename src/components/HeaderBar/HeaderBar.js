@@ -52,7 +52,7 @@ const HeaderBar = () => {
 						</div>
 					)}
 				</Form>
-			</div >
+			</div>
 			<div className="title">
 				<span>{window.location.pathname.slice(1)}</span>
 			</div>
