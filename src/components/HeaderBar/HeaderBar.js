@@ -1,38 +1,70 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./HeaderBar.css";
-import { Form, FormControl, Button, Dropdown } from 'react-bootstrap';
+
+import { Form, FormControl, Button, Dropdown, Nav } from 'react-bootstrap';
 import { FaSearch, FaBell, FaUser } from "react-icons/fa";
 
 // Create a header that spans the top of the page(excluding the sidebar).
 // Include a search bar, a notifications icon, and a user profile dropdown.
 
 const HeaderBar = () => {
+
+	const [search, setSearch] = useState("");
+
+	const hardcodedSearchValues = [
+		'Dashboard',
+		'Profile',
+		'Settings',
+		'Notifications'
+	];
+
 	return (
 		<div className="top-bar">
 			<div className="sidebar-controls">
-				Sidebar controls
-			</div>
-			<div className="title">
-				<span>Header Bar</span>
-			</div>
-			<div className="profile-section">
 				<Form className="search">
+					<Button variant="outline-light">
+						<FaSearch />
+					</Button>
 					<FormControl
 						type="search"
 						placeHolder="Search"
 						aria-label="Search"
+						value={search}
+						onChange={(event) => {
+							setSearch(event.target.value);
+						}}
 					/>
-					<Button variant="outline-primary">
-						<FaSearch />
-					</Button>
+					{search && (
+						<div className="search-results bg-dark">
+							<ul class="list-group">
+								{hardcodedSearchValues.filter((result) => {
+									console.log('result: ', result);
+									console.log('search.toLowerCase: ', search.toLowerCase);
+									return result.toLowerCase().includes(search.toLowerCase());
+								}).map((result, index) => (
+									<Nav.Link href={`\\${result.toLowerCase()}`}>
+										<li className="list-group-item" key={index}>
+											{result}
+										</li>
+									</Nav.Link>
+								))}
+							</ul>
+						</div>
+					)}
 				</Form>
+			</div >
+			<div className="title">
+				<span>{window.location.pathname.slice(1)}</span>
+			</div>
+			<div className="profile-section">
+
 				<Button className="ms-2" variant="outline-light">
 					<FaBell />
 				</Button>
 
 				<Dropdown className="ms-2">
-					<Dropdown.Toggle variant="outline-primary" id="dropdown-basic">
-						User Profile
+					<Dropdown.Toggle variant="outline-light" id="dropdown-basic">
+						<FaUser />
 					</Dropdown.Toggle>
 
 					<Dropdown.Menu>
