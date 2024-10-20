@@ -11,7 +11,7 @@ import "./VerticalNavBar.css"
 
 const VerticalNavBar = () => {
 	return (
-		<Navbar expand="lg" className="bg-body-tertiary p-2 bg-primary">
+		<Navbar expand="lg" className="p-2">
 			<div className="nav-container">
 				<Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
 				<Navbar.Toggle
