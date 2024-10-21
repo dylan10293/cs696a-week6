@@ -2,6 +2,7 @@
 	/* background: yellow; */
 	display: flex;
 	align-items: center;
+	padding-left: 10px;
 }
 
 .side-bar .nav-link span {
@@ -13,4 +14,14 @@
 	/* display: flex; */
 	/* flex-direction: column; */
 	/* align-items: center; */
+}
+
+.side-bar {
+	width: 250px;
+}
+
+@media (min-width: 992px) {
+	.close-sidebar {
+		display: none;
+	}
 }

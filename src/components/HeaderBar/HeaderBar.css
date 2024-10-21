@@ -5,6 +5,16 @@
 	align-items: center;
 }
 
+.sidebar-controls {
+	display: flex;
+}
+
+@media (min-width: 992px) {
+	.toggle-sidebar {
+		display: none;
+	}
+}
+
 .profile-section {
 	display: flex;
 	align-items: center;

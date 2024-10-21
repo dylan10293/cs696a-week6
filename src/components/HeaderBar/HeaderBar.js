@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 import "./HeaderBar.css";
 
 import { Form, FormControl, Button, Dropdown, Nav } from 'react-bootstrap';
-import { FaSearch, FaBell, FaUser } from "react-icons/fa";
+import { FaSearch, FaBell, FaUser, FaBars } from "react-icons/fa";
 
 // Create a header that spans the top of the page(excluding the sidebar).
 // Include a search bar, a notifications icon, and a user profile dropdown.
 
-const HeaderBar = () => {
+const HeaderBar = ({ toggleSidebar }) => {
 
 	const [search, setSearch] = useState("");
 
@@ -21,7 +21,10 @@ const HeaderBar = () => {
 	return (
 		<div className="top-bar">
 			<div className="sidebar-controls">
-				<Form className="search">
+				<Button className="toggle-sidebar" variant="outline-none" onClick={toggleSidebar}>
+					<FaBars />
+				</Button>
+				<Form className="search ms-2">
 					<Button variant="outline-light">
 						<FaSearch />
 					</Button>
@@ -58,12 +61,12 @@ const HeaderBar = () => {
 			</div>
 			<div className="profile-section">
 
-				<Button className="ms-2" variant="outline-light">
+				<Button className="ms-2" variant="outline-none">
 					<FaBell />
 				</Button>
 
 				<Dropdown className="ms-2">
-					<Dropdown.Toggle variant="outline-light" id="dropdown-basic">
+					<Dropdown.Toggle variant="outline-none" id="dropdown-basic">
 						<FaUser />
 					</Dropdown.Toggle>
 
