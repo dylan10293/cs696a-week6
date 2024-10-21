@@ -3,6 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import VerticalNavBar from './components/VerticalNavigation/VerticalNavBar';
 import HeaderBar from './components/HeaderBar/HeaderBar';
+import Dashboard from './components/Dashboard/Dashboard';
 
 function App() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
@@ -14,7 +15,7 @@ function App() {
       <div className="main-container">
         <HeaderBar toggleSidebar={() => setSidebarCollapsed(!sidebarCollapsed)} />
         <div className="content-container">
-          Content goes here
+          <Dashboard />
         </div>
       </div>
     </div>
