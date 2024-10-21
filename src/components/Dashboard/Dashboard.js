@@ -1,31 +1,56 @@
 import React from 'react'
-import StatCard from "../Card/StatCard"
+import StatCard from "../StatsCard/StatCard"
+import ChartCard from '../ChartCard/ChartCard'
 
 const Dashboard = () => {
 	const stats = [{
 		title: "Total Users",
-		stat: 10000
+		stat: "10,000"
 	}, {
 		title: "Revenue",
-		stat: 10000
+		stat: "23,324$"
 	}, {
 		title: "Orders",
-		stat: 10000
+		stat: 102
 	}, {
 		title: "Conversion Rate",
-		stat: 10000
+		stat: 3.75
 	},]
 
+	const chartData = {
+		labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+		datasets: [
+			{
+				label: 'Dataset 1',
+				data: [65, 59, 80, 81, 56, 55, 40],
+				borderColor: 'rgba(75, 192, 192, 1)',
+				backgroundColor: 'rgba(75, 192, 192, 0.2)',
+				fill: true,
+			},
+		],
+	};
+
+	const activities = [
+		{ id: 1, action: 'Login', user: 'John Doe', time: '2024-10-19 10:30' },
+		{ id: 2, action: 'Viewed Dashboard', user: 'Jane Smith', time: '2024-10-19 11:00' },
+		{ id: 3, action: 'Uploaded File', user: 'John Doe', time: '2024-10-19 11:45' },
+		{ id: 4, action: 'Logout', user: 'Jane Smith', time: '2024-10-19 12:15' },
+		{ id: 5, action: 'Login', user: 'Michael Johnson', time: '2024-10-19 13:00' },
+	];
+
 	return (
-		<div class="">
-			<div class="row gx-2">
+		<div className="">
+			<div className="row g-2">
 				{stats.map(({ title, stat }) => (
-					<div class="col-6 col-md-3">
+					<div className="col-6 col-md-3">
 						<StatCard title={title} stat={stat} />
 					</div>
 				))}
-			</div>
+				<div className="col-12 col-md-6">
+					<ChartCard data={chartData} />
+				</div>
 
+			</div>
 		</div>
 	)
 }
