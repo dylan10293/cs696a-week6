@@ -2,6 +2,7 @@ import React from 'react'
 import StatCard from "../StatsCard/StatCard"
 import ChartCard from '../ChartCard/ChartCard'
 import ActivityCard from '../ActivityCard/ActivityCard'
+import PerformanceCard from '../PerformanceCard/PerformanceCard'
 
 const Dashboard = () => {
 	const stats = [{
@@ -39,6 +40,13 @@ const Dashboard = () => {
 		{ id: 5, action: 'Login', user: 'Michael Johnson', time: '2024-10-19 13:00' },
 	];
 
+	const metrics = [
+		{ label: 'CPU Usage', value: 70 },
+		{ label: 'Memory Usage', value: 85 },
+		{ label: 'Disk Usage', value: 45 },
+		{ label: 'Network Latency', value: 60 }
+	];
+
 	return (
 		<div className="">
 			<div className="row g-2">
@@ -47,6 +55,9 @@ const Dashboard = () => {
 						<StatCard title={title} stat={stat} />
 					</div>
 				))}
+				<div className="col-12">
+					<PerformanceCard metrics={metrics} title={"Performance Metrics"} />
+				</div>
 				<div className="col-12 col-md-6">
 					<ChartCard data={chartData} />
 				</div>
