@@ -1,6 +1,7 @@
 import React from 'react'
 import StatCard from "../StatsCard/StatCard"
 import ChartCard from '../ChartCard/ChartCard'
+import ActivityCard from '../ActivityCard/ActivityCard'
 
 const Dashboard = () => {
 	const stats = [{
@@ -49,7 +50,9 @@ const Dashboard = () => {
 				<div className="col-12 col-md-6">
 					<ChartCard data={chartData} />
 				</div>
-
+				<div className="col-12 col-md-6">
+					<ActivityCard activities={activities} title={"Recent Activity"} />
+				</div>
 			</div>
 		</div>
 	)
