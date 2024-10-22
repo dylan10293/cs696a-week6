@@ -41,7 +41,7 @@ const ChartCard = ({ data }) => {
 	return (
 		<Card className="text-start">
 			<Card.Body>
-				<Card.Title className="fs-6">Sales Overview</Card.Title>
+				<Card.Title className="fs-6 text-info-emphasis">Sales Overview</Card.Title>
 				<Line data={data} options={options} />
 			</Card.Body>
 		</Card>

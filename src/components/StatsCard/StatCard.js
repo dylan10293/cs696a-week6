@@ -6,7 +6,7 @@ const StatCard = ({ title, stat }) => {
 	return (
 		<Card className="stat-card">
 			<Card.Body>
-				<Card.Title className="fs-6">{title}</Card.Title>
+				<Card.Title className="fs-6 text-info-emphasis">{title}</Card.Title>
 				<Card.Text className="fs-1">
 					{stat.toString()}
 				</Card.Text>

@@ -5,7 +5,7 @@ const ActivityCard = ({ title, activities }) => {
 	return (
 		<Card className="text-start">
 			<Card.Body>
-				<Card.Title className="fs-6">{title}</Card.Title>
+				<Card.Title className="fs-6 text-info-emphasis">{title}</Card.Title>
 				<Card.Text>
 					<Table striped bordered hover responsive>
 						<thead>

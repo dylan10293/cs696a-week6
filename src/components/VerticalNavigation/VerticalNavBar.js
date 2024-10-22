@@ -9,7 +9,7 @@ import "./VerticalNavBar.css"
 ///// TODO: Include at least 5 menu items with icons(you can use React icons or Font Awesome).
 // TODO: Ensure the sidebar is collapsible on smaller screens.
 
-const VerticalNavBar = ({ toggleSidebar }) => {
+const VerticalNavBar = ({ toggleSidebar, sidebarCollapsed }) => {
 
 	const options = [{
 		text: "Dashboard",
@@ -34,16 +34,18 @@ const VerticalNavBar = ({ toggleSidebar }) => {
 	}]
 
 	return (
-		<Navbar expand="lg" className="p-2">
+		<Navbar expand="lg" className={`side-bar p-3 align-items-start text-start bg-dark ${sidebarCollapsed ? 'collapsed' : ''}`}>
 			<div className="nav-container">
-				<Button className="close-sidebar" variant="outline-none" onClick={toggleSidebar}>
-					<FaTimes />
-				</Button>
-				<Navbar.Brand href="#home" className="ps-3">React-Bootstrap</Navbar.Brand>
+				<div className="nav-header">
+					<Button className="close-sidebar" variant="outline-none" onClick={toggleSidebar}>
+						<FaTimes />
+					</Button>
+					<Navbar.Brand href="#home" className="ps-3 text-info-emphasis">DManMoney</Navbar.Brand>
+				</div>
 
 				<Nav className="flex-column w-100 mt-3">
 					{options.map(({ text, href, icon }) => (
-						<Nav.Link href={href}>
+						<Nav.Link href={href} className="d-flex align-items-center">
 							{icon}<span>{text}</span>
 						</Nav.Link>
 					))}
