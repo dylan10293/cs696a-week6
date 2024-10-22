@@ -5,7 +5,7 @@ const PerformanceCard = ({ metrics, title }) => {
 	return (
 		<Card className="text-start">
 			<Card.Body>
-				<Card.Title className="fs-6">{title}</Card.Title>
+				<Card.Title className="fs-6 text-info-emphasis">{title}</Card.Title>
 				<Card.Text>
 					{metrics.map((metric, index) => (
 						<div key={index} className="mb-3">

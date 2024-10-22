@@ -7,7 +7,7 @@ import { FaSearch, FaBell, FaUser, FaBars } from "react-icons/fa";
 // Create a header that spans the top of the page(excluding the sidebar).
 // Include a search bar, a notifications icon, and a user profile dropdown.
 
-const HeaderBar = ({ toggleSidebar }) => {
+const HeaderBar = ({ toggleSidebar, sidebarCollapsed }) => {
 
 	const [search, setSearch] = useState("");
 
