@@ -7,13 +7,13 @@ import Dashboard from './components/Dashboard/Dashboard';
 import Footer from './components/Footer/Footer';
 
 function App() {
-  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(true);
   return (
     <div className="App">
       <div className="main-container">
-        <VerticalNavBar toggleSidebar={() => setSidebarCollapsed(!sidebarCollapsed)} />
+        <VerticalNavBar sidebarCollapsed={sidebarCollapsed} toggleSidebar={() => setSidebarCollapsed(!sidebarCollapsed)} />
         <div className="left-content">
-          <HeaderBar toggleSidebar={() => setSidebarCollapsed(!sidebarCollapsed)} />
+          <HeaderBar sidebarCollapsed={sidebarCollapsed} toggleSidebar={() => setSidebarCollapsed(!sidebarCollapsed)} />
           <div className="content-container">
             <Dashboard />
           </div>
