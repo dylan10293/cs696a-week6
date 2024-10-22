@@ -51,7 +51,7 @@ const Dashboard = () => {
 		<div className="">
 			<div className="row g-2">
 				{stats.map(({ title, stat }) => (
-					<div className="col-6 col-md-3">
+					<div className="col-12 col-md-6 col-lg-3">
 						<StatCard title={title} stat={stat} />
 					</div>
 				))}
@@ -59,10 +59,10 @@ const Dashboard = () => {
 					<PerformanceCard metrics={metrics} title={"Performance Metrics"} />
 				</div>
 				<div className="col-12 col-md-6">
-					<ChartCard data={chartData} />
+					<ActivityCard activities={activities} title={"Recent Activity"} />
 				</div>
 				<div className="col-12 col-md-6">
-					<ActivityCard activities={activities} title={"Recent Activity"} />
+					<ChartCard data={chartData} />
 				</div>
 			</div>
 		</div>
