@@ -20,6 +20,10 @@
 	width: 250px;
 }
 
+.nav-container .nav-link svg {
+	margin-right: 5px;
+}
+
 @media (min-width: 992px) {
 	.close-sidebar {
 		display: none;

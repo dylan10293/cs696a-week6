@@ -34,16 +34,16 @@ const VerticalNavBar = ({ toggleSidebar }) => {
 	}]
 
 	return (
-		<Navbar expand="lg" className="p-2">
+		<Navbar expand="lg" className="p-3 align-items-start text-start">
 			<div className="nav-container">
 				<Button className="close-sidebar" variant="outline-none" onClick={toggleSidebar}>
 					<FaTimes />
 				</Button>
-				<Navbar.Brand href="#home" className="ps-3">React-Bootstrap</Navbar.Brand>
+				<Navbar.Brand href="#home" className="ps-3 text-info-emphasis">React-Bootstrap</Navbar.Brand>
 
 				<Nav className="flex-column w-100 mt-3">
 					{options.map(({ text, href, icon }) => (
-						<Nav.Link href={href}>
+						<Nav.Link href={href} className="d-flex align-items-center">
 							{icon}<span>{text}</span>
 						</Nav.Link>
 					))}

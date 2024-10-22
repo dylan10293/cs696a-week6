@@ -1,6 +1,7 @@
 .App {
 	text-align: center;
 	display: flex;
+	flex-direction: column;
 	/* background-color: cadetblue; */
 	height: 100vh;
 }
@@ -8,8 +9,9 @@
 .main-container {
 	display: flex;
 	flex-grow: 1;
-	height: 100%;
-	flex-direction: column;
+	/* height: 100%; */
+	/* flex-direction: column; */
+	/* background-color: red; */
 }
 
 .content-container {
