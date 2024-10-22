@@ -6,6 +6,12 @@
 	background-color: #1b1b1d;
 }
 
+@media (max-width: 992px) {
+	.top-bar .title {
+		display: none;
+	}
+}
+
 .sidebar-controls {
 	display: flex;
 }
